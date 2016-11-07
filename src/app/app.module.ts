@@ -9,21 +9,37 @@ import { AppComponent } from './app.component';
 import { NavComponent} from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { AuthComponent } from './auth/auth.component';
+import { RegisterComponent} from './auth/register/register.component';
+import { RegisterFormComponent } from './auth/register-form/register-form.component';
+import { ErrorComponent} from './error/error.component';
+import { LoginComponent} from './auth/login/login.component';
+import { LoginFormComponent} from './auth/login-form/login-form.component';
+
+import { AuthService} from './shared/services/auth.service';
+import { EmployeeService } from './shared/services/employee.service';
+import { ErrorService } from './shared/services/error.service';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     HomeComponent,
-    AuthComponent
+    AuthComponent,
+    RegisterComponent,
+    RegisterFormComponent,
+    ErrorComponent,
+    LoginComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     RouterModule.forRoot(RouterConfig)
   ],
-  providers: [],
+  providers: [AuthService, EmployeeService, ErrorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

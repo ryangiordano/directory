@@ -8,7 +8,8 @@ var mongoose = require('mongoose');
 var engine = require('consolidate');
 
 var appRoutes = require('./routes/appRoutes');
-// var users = require('./routes/users');
+var userRoutes = require('./routes/users');
+var employeeRoutes = require('./routes/employees');
 
 var app = express();
 ///---------SET UP SEED DATA
@@ -54,6 +55,8 @@ mongoose.Promise = global.Promise;
 
 //routes
 app.use('/', appRoutes);
+app.use('/users-api', userRoutes);
+// app.use('/employees-api', employeeRoutes);
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
