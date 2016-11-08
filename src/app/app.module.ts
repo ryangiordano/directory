@@ -14,6 +14,7 @@ import { RegisterFormComponent } from './auth/register-form/register-form.compon
 import { ErrorComponent} from './error/error.component';
 import { LoginComponent} from './auth/login/login.component';
 import { LoginFormComponent} from './auth/login-form/login-form.component';
+import { EmployeeComponent} from './employee/employee.component';
 
 import { AuthService} from './shared/services/auth.service';
 import { EmployeeService } from './shared/services/employee.service';
@@ -30,7 +31,8 @@ import { ErrorService } from './shared/services/error.service';
     RegisterFormComponent,
     ErrorComponent,
     LoginComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,

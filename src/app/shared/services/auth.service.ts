@@ -12,6 +12,7 @@ user:User= null;
 userSource = new BehaviorSubject<User>(null);
 
   constructor(private _http:Http) { }
+
   login(user:User):Observable<any>{
     const body = JSON.stringify(user);
     const headers = new Headers({'Content-type': 'application/json'});
@@ -23,9 +24,14 @@ userSource = new BehaviorSubject<User>(null);
     })
     .catch(error=>Observable.throw(error.json()));
   }
+
   logout(){
-    this.userSource.next(this.user);
-    localStorage.clear();
+    return new Observable(observer=>{
+      this.userSource.next(this.user);
+      localStorage.clear();
+        console.log("logged out")
+    });
+
   }
   registerNewUser(user:User):Observable<any>{
     const body = JSON.stringify(user);
@@ -33,5 +39,8 @@ userSource = new BehaviorSubject<User>(null);
     return this._http.post('/users-api',body,{headers:headers})
     .map((response:Response)=>response.json())
     .catch(error=>Observable.throw(error.json()))
+  }
+  isLoggedIn(){
+    return localStorage.getItem('token')!==null;
   }
 }

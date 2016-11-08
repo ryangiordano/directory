@@ -23,11 +23,11 @@ var schema = new Schema({
   },
   branch:{
     type: String,
-    required:true
+    required:false
   },
   picture:{
     type: String,
-    required:true
+    required:false
   }
 });
 

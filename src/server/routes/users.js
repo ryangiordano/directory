@@ -34,5 +34,13 @@ router.post('/login',function(req,res,next){
     })
   });
 });
-
+// router.post('/register',function(req,res,next){
+//   var user = new User({
+//     firstName:,
+//     lastName:,
+//     email:,
+//     password:
+//   })
+//   User.create()
+// });
 module.exports = router;

@@ -13,10 +13,11 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li routerLinkActive="active"><a routerLink="home">Home</a></li>
-        <li routerLinkActive="active"><a routerLink="register">Register User</a></li>
+        <li routerLinkActive="active"><a routerLink="employee/add">Add Employees</a></li>
+        <li routerLinkActive="active" *ngIf="!isLoggedIn()"><a routerLink="auth">Login</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a>Logout</a></li>
+      <ul *ngIf="isLoggedIn()"class="nav navbar-nav navbar-right">
+        <li><a class="logout" (click)="logout()">Logout</a></li>
       </ul>
     </div>
   </div>

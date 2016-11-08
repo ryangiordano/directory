@@ -13,12 +13,12 @@ var employeeRoutes = require('./routes/employees');
 
 var app = express();
 ///---------SET UP SEED DATA
-// if (app.get('env') === 'development'){
-//
-//   var setupController = require('./controllers/setupController');
-//   setupController(app);
-//
-// }
+if (app.get('env') === 'development'){
+
+  var setupController = require('./controllers/setupController');
+  setupController(app);
+
+}
 ////------///
 
 
@@ -56,7 +56,7 @@ mongoose.Promise = global.Promise;
 //routes
 app.use('/', appRoutes);
 app.use('/users-api', userRoutes);
-// app.use('/employees-api', employeeRoutes);
+app.use('/employees-api', employeeRoutes);
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {

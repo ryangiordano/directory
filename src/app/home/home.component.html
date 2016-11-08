@@ -1,3 +1,35 @@
-<p>
-  home works!
-</p>
+<style media="screen">
+  .panel-primary .panel-heading {
+    background-color: #404040;
+  }
+
+  h5 {
+    color: white;
+  }
+</style>
+<div class="row">
+  <div class="col-md-8">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h5>Search for a member</h5>
+      </div>
+      <div class="panel-body">
+        <input class="form-control">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-3" *ngFor="let employee of employees">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+            {{employee.firstName}} {{ employee.lastName}}
+      </div>
+      <div class="panel-body">
+        <img src="{{employee.picture}}" alt="" height="250px" />
+      </div>
+    </div>
+
+  </div>
+</div>
