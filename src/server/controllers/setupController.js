@@ -30,7 +30,7 @@ module.exports = function(app){
         title: 'job',
         phone: '555-555-5555',
         branch: 'Louisville',
-        picture: 'https://pixabay.com/static/uploads/photo/2014/08/20/07/58/girl-422333_960_720.jpg'
+        picture: 'http://www.partoflifephotography.com/wp-content/uploads/2015/09/OL_0003_w002-1024x751.jpg'
       },
       {
         firstName: 'Anthony',
@@ -75,7 +75,7 @@ module.exports = function(app){
         title: 'job',
         phone: '555-555-5555',
         branch: 'Louisville',
-        picture: 'https://pixabay.com/static/uploads/photo/2014/08/20/07/58/girl-422333_960_720.jpg'
+        picture: 'http://www.partoflifephotography.com/wp-content/uploads/2015/09/OL_0003_w002-1024x751.jpg'
       }
     ];
     Employee.create(starterEmployees, function(err,results){
