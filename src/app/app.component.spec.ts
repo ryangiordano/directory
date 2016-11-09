@@ -3,7 +3,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
-describe('App: Directory2', () => {
+describe('App: CodigoDirectory', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
