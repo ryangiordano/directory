@@ -17,4 +17,21 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.post('/', function(req,res,next){
+  Employee.find({firstName: new RegExp(req.body.string,'i')}).exec(function(err, doc){
+    if(err){
+      console.log("Error")
+      return res.status(404).json({
+        title: "No users found",
+        error: err
+      });
+    }
+    console.log("got through")
+    return res.status(200).json({
+      message: "Success",
+      obj: doc
+    });
+  })
+});
+
 module.exports = router;

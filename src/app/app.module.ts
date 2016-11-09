@@ -15,6 +15,8 @@ import { ErrorComponent} from './error/error.component';
 import { LoginComponent} from './auth/login/login.component';
 import { LoginFormComponent} from './auth/login-form/login-form.component';
 import { EmployeeComponent} from './employee/employee.component';
+import { SearchComponent} from './search/search.component';
+import { SearchFormComponent} from './search/search-form/search-form.component';
 
 import { AuthService} from './shared/services/auth.service';
 import { EmployeeService } from './shared/services/employee.service';
@@ -32,7 +34,9 @@ import { ErrorService } from './shared/services/error.service';
     ErrorComponent,
     LoginComponent,
     LoginFormComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    SearchComponent,
+    SearchFormComponent
   ],
   imports: [
     BrowserModule,
